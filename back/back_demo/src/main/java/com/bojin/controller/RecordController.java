@@ -40,6 +40,14 @@ public class RecordController {
     }
 
 
+    @ApiOperation("导入样本数据")
+    @PostMapping("/importMore")
+    public Result importMore(MultipartFile file) throws IOException {
+        recordService.importMoreSheetRecord(file);
+        return Result.succeed(null);
+    }
+
+
     @ApiOperation("条件分页查询样本数据")
     @GetMapping("{current}/{limit}")
     public Result save(@PathVariable("current")Long current,

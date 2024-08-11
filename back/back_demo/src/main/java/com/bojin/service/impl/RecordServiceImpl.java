@@ -2,7 +2,10 @@ package com.bojin.service.impl;
 
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.ExcelReader;
+import com.alibaba.excel.read.builder.ExcelReaderBuilder;
 import com.alibaba.excel.read.listener.PageReadListener;
+import com.alibaba.excel.read.metadata.ReadSheet;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bojin.common.exception.CustomException;
@@ -14,6 +17,7 @@ import com.bojin.entity.vo.excel.InventoryRecordImportExcel;
 import com.bojin.entity.vo.query.RecordQueryVo;
 import com.bojin.entity.vo.request.RecordAddReq;
 import com.bojin.entity.vo.response.RecordRepsVO;
+import com.bojin.listener.MoreSheetListener;
 import com.bojin.mapper.RecordMapper;
 import com.bojin.service.RecordService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -47,11 +51,15 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> implements RecordService {
 
+    /**
+     *
+     */
     private final SeatService seatService;
 
 
     /**
      * 导入
+     *
      * @param file
      * @throws IOException
      */
@@ -101,9 +109,9 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
 
     /**
      * 条件分页查询
-     * @param page
+     *
      * @param recordQueryVo 查询条件
-     * @return
+     * @param page
      */
     @Override
     public Map<String, Object> selectRecordPage(Page<Record> page, RecordQueryVo recordQueryVo) {
@@ -163,8 +171,9 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
 
     /**
      * 批量删除
+     *
+     * @param ids 主键
      * @param ids
-     * @return
      */
     @Override
     @Transactional(rollbackFor = Exception.class)
@@ -187,8 +196,9 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
 
     /**
      * 单个删除
+     *
+     * @param id 主键
      * @param id
-     * @return
      */
     @Override
     @Transactional(rollbackFor = Exception.class)
@@ -209,8 +219,9 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
 
     /**
      * 根据id查询样本数据信息
+     *
+     * @param id 主键
      * @param id
-     * @return
      */
     @Override
     public RecordRepsVO getRecordById(Long id) {
@@ -231,8 +242,8 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
 
     /**
      * 添加样本数据
+     *
      * @param recordAddReq
-     * @return
      */
     @Override
     @Transactional(rollbackFor = Exception.class)
@@ -260,8 +271,8 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
 
     /**
      * 修改样本数据
+     *
      * @param recordAddReq
-     * @return
      */
     @Override
     @Transactional(rollbackFor = Exception.class)
@@ -282,6 +293,7 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
 
     /**
      * 导出样本数据
+     *
      * @param servletResponse
      */
     @Override
@@ -317,6 +329,44 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
 
         EasyExcel.write(servletResponse.getOutputStream(), InventoryRecordExportExcel.class).autoCloseStream(Boolean.FALSE).sheet("sheet1")
                 .doWrite(recordRepsVOList);
+
+    }
+
+    /**
+     * 将excel表的所有sheet的数据存入数据库
+     */
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void importMoreSheetRecord(MultipartFile file) throws IOException {
+        MoreSheetListener listener = new MoreSheetListener();
+
+        ExcelReaderBuilder excelReaderBuilder = EasyExcel.read(file.getInputStream(), InventoryRecordImportExcel.class, listener);
+        excelReaderBuilder.doReadAll();
+
+        // 获取所有 sheet 的数据
+        List<InventoryRecordImportExcel> allData = listener.getDataList();
+        //allData.forEach(System.out::println);
+
+
+        List<Record> recordList = new ArrayList<>();
+        List<Seat> seatList = new ArrayList<>();
+
+        allData.forEach(recordImportExcel ->{
+            if(null != recordImportExcel){
+                Record record = new Record();
+                Seat seat = new Seat();
+                if (recordImportExcel.getRecordId() != null){
+                    BeanUtils.copyProperties(recordImportExcel,record);
+                    recordList.add(record);
+                    BeanUtils.copyProperties(recordImportExcel,seat);
+                    seat.setSeatId(record.getRecordId());
+                    seatList.add(seat);
+                }
+            }
+        });
+
+        this.saveOrUpdateBatch(recordList);
+        seatService.saveOrUpdateBatch(seatList);
 
     }
 }

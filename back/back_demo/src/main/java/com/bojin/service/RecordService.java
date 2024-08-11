@@ -36,4 +36,6 @@ public interface RecordService extends IService<Record> {
     boolean updateRecord(RecordAddReq recordAddReq);
 
     void exportRecordToExcel(HttpServletResponse servletResponse) throws IOException;
+
+    void importMoreSheetRecord(MultipartFile file) throws IOException;
 }
