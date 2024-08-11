@@ -1,0 +1,31 @@
+
+‡	java:S112¼"FDefine and throw a dedicated exception instead of using a generic one.(Äã£øÿÿÿÿJ$584aa422-854f-4427-a87d-4d8c6c0f4e9f
+–
+java:S2293€"YReplace the type specification in this constructor call with the diamond operator ("<>").(›ë«J$49c41106-e37a-4ddb-ac89-2b479ea395d0
+–
+java:S2293‘"YReplace the type specification in this constructor call with the diamond operator ("<>").(›ë«J$9294acad-79ae-48c3-b433-3834ed441d63
+–
+java:S2293¡"YReplace the type specification in this constructor call with the diamond operator ("<>").(›ë«J$18eeed8c-a956-406c-b814-30a2317493d5
+Œ
+java:S1192Š"JDefine a constant instead of duplicating this literal "beginDate" 3 times.(Â©¡ØüÿÿÿÿJ$194a09f4-cdce-405a-a90a-9e844114ee29
+…
+java:S1192‹"HDefine a constant instead of duplicating this literal "endDate" 3 times.(Èí»’J$9ee62661-af22-47ac-8ca0-fbbb458c534d
+Œ
+java:S1192S"PUse already-defined constant 'YYYY_MM_DD' instead of duplicating its value here.(ÿ¥Ò˜J$1fd13420-4f59-46be-a161-9e90e869119d
+ 
+java:S1488Ş"cImmediately return this expression instead of assigning it to the temporary variable "betweenDays".(âı‹ËJ$626420fa-3d43-4f88-b107-8dc6d1d78a66
+Œ
+java:S1104."QMake today a static final constant or non-public and provide accessors if needed.(¹É¿J$27d955ef-e790-4b29-aa20-8eb5f1acea84
+–
+java:S1104/"UMake yesterday a static final constant or non-public and provide accessors if needed.(Õ¹ˆòùÿÿÿÿJ$d3fada13-96ab-44ff-b1c9-e6769eeb7803
+f
+java:S1444."+Make this "public static today" field final(¹É¿J$cf0d9de1-be87-4cd3-846c-c1bb2a836c9f
+p
+java:S1444/"/Make this "public static yesterday" field final(Õ¹ˆòùÿÿÿÿJ$fb0310d4-069d-4911-88ec-7997ce0f011d
+ƒ
+java:S2184¢"FCast one of the operands of this multiplication operation to a "long".(¢¡J$9c93d6c0-2e5b-4090-9f69-b954917c0f39
+^	java:S131Ğ""Add a default case to this switch.(¥™†‡J$95587629-6b41-4c03-a65f-7328921275bf
+Y
+java:S2153¢"Remove the boxing to "Long".(¢¡J$5f2535b1-711c-40ca-b0b8-6c72a4afec3b
+~
+java:S1126¿"AReplace this if-then-else statement by a single return statement.(¨å¦ŸJ$c1a31557-7b72-4476-9112-a14c0ad146df

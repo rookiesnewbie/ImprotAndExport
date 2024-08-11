@@ -1,0 +1,33 @@
+
+Š
+java:S3252A"GUse static access with "com.alibaba.excel.EasyExcelFactory" for "read".(‰Õ¼¦8ù§Æâ“2J$3be5b72f-4a6f-4b2e-9dc8-2b9bc86c9a8d
+}
+java:S6213M":Rename this variable to not match a restricted identifier.(²˜¹ú8ÿ§Æâ“2J$3528832e-2ef4-4c39-9abc-11a55ded0794
+
+java:S6809^"UCall transactional methods via an injected dependency instead of directly via 'this'.(Õä¬üÿÿÿÿ8‚¨Æâ“2J$1e726b3d-2ee4-4565-ae55-0efdb152af9b
+
+java:S3252p"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isEmpty".(ˆÁª 8„¨Æâ“2J$8aebdde7-fe25-4340-8c64-a91e5c46a38f
+”
+java:S3252s"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isEmpty".(¶±¾Êúÿÿÿÿ8…¨Æâ“2J$2207214a-2ae4-4662-8ae2-e0b4c3f80eef
+ƒ
+java:S1612|"@Replace this lambda with method reference 'Record::getRecordId'.(Üõü·8ˆ¨Æâ“2J$f6a892aa-5e08-4674-ade7-982c6493243c
+}
+java:S6213|":Rename this variable to not match a restricted identifier.(Üõü·8ˆ¨Æâ“2J$0cf29e78-b4cb-4bd0-81a1-c34678440619
+
+java:S3252€"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isEmpty".(ç§»8Š¨Æâ“2J$31dddd1c-9e8e-4bdf-8fae-02e058a0c81e
+‚
+java:S1155„">Use isEmpty() to check whether the collection is empty or not.(¢ÇŸ8Œ¨Æâ“2J$10641f97-d2de-41ad-b330-c8b03fc64dd1
+~
+java:S6213Œ":Rename this variable to not match a restricted identifier.(‚¬8¨Æâ“2J$2e911687-6fd0-4504-9c07-eb21f5ac481f
+‚
+java:S1155­">Use isEmpty() to check whether the collection is empty or not.(ÓÚ®•8”¨Æâ“2J$ca787c71-63d9-4970-8ca0-f7f963cde35e
+~
+java:S6213Ü":Rename this variable to not match a restricted identifier.(©…É…8™¨Æâ“2J$f4149c8d-cf43-40bd-a340-71933530b9c2
+~
+java:S6213ó":Rename this variable to not match a restricted identifier.(²˜¹ú8¨Æâ“2J$de659114-5fa3-4777-8da0-2a9f8101b382
+~
+java:S6213":Rename this variable to not match a restricted identifier.(²˜¹ú8Ÿ¨Æâ“2J$c66caa8b-a13b-44ce-8ade-b59595e58e4b
+ƒ
+java:S6213«":Rename this variable to not match a restricted identifier.(ÌÀ‡Êÿÿÿÿÿ8­ƒáú“2J$7307caf1-cef8-42b6-838b-322e2d876ad2
+‘
+java:S3252¾"HUse static access with "com.alibaba.excel.EasyExcelFactory" for "write".(¡…°êüÿÿÿÿ8ğ×çú“2J$b2a13533-c25d-49e8-8418-08c75c14d0f2

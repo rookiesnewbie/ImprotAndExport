@@ -1,0 +1,7 @@
+
+
+java:S3252*"GUse static access with "com.alibaba.excel.EasyExcelFactory" for "read".(¬È½ûÿÿÿÿ8›å×ş“2J$783a4f1f-fa3c-470f-b803-900c6a3fae85
+˜
+java:S6809<"UCall transactional methods via an injected dependency instead of directly via 'this'.(¢ÎÇ‘8ø½·ÿ“2J$c13d4685-0d45-4527-9e4b-399d33fd0857
+
+java:S3252R"HUse static access with "com.alibaba.excel.EasyExcelFactory" for "write".(«Ú§ºıÿÿÿÿ8¥å×ş“2J$e61f7765-fd71-4957-b75b-0dac49119d2e

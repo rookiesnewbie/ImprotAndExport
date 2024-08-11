@@ -1,0 +1,10 @@
+
+†	java:S112%"FDefine and throw a dedicated exception instead of using a generic one.(Ú„ÎıÿÿÿÿJ$7a3b4d9a-27b5-4e38-8a3b-0a5a216e7f26
+†	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(›ô…ƒıÿÿÿÿJ$c136c2b4-4385-4c52-86be-d090d13b59bd
+ˆ
+java:S3252&"LUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isEmpty".(’ıÂ€J$d96dd2ed-1215-473c-8478-fff82432a683
+­
+java:S11303"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(›ô…ƒıÿÿÿÿJ$6509f551-1d1f-42ab-9199-e56fb92329ab
+f	java:S106;"+Replace this use of System.out by a logger.(˜ÀÒÑJ$4468ac19-2721-4006-9533-7a3ef75ad45a
+s
+java:S1135="2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿJ$a0fd65f3-1485-4172-babc-395eb8514031
