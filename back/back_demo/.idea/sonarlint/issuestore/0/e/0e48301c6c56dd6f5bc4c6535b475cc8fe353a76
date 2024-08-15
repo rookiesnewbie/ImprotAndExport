@@ -1,16 +1,16 @@
 
 
-java:S1128"GRemove this unused import 'com.baomidou.mybatisplus.annotation.IdType'.(İàƒ©ùÿÿÿÿ8æÕŞş“2J$4d81953e-e51c-4a43-a4fa-45403ca1db5b
+java:S1128"GRemove this unused import 'com.baomidou.mybatisplus.annotation.IdType'.(İàƒ©ùÿÿÿÿ8æÕŞş“2J$18d53197-7c11-4473-86e2-a9b35762730c
 ‹
-java:S1128"HRemove this unused import 'com.baomidou.mybatisplus.annotation.TableId'.(ÕƒõÊ8èÕŞş“2J$51ec2e1f-d45f-4641-8c91-1e1f59f6cd35
+java:S1128"HRemove this unused import 'com.baomidou.mybatisplus.annotation.TableId'.(ÕƒõÊ8èÕŞş“2J$7103829e-76c7-4a72-9b72-1adaf67702da
 „
-java:S1128"<Remove this unused import 'io.swagger.annotations.ApiModel'.(ÕŸÎşüÿÿÿÿ8…àİş“2J$4e572238-0630-481b-b104-e69b6134549b
+java:S1128"<Remove this unused import 'io.swagger.annotations.ApiModel'.(ÕŸÎşüÿÿÿÿ8…àİş“2J$6cfc293b-30d6-46fd-8395-db85e9cc88d9
 †
-java:S1128"DRemove this unused import 'io.swagger.annotations.ApiModelProperty'.(í˜í8Œşäş“2J$511394f8-fc19-4861-a53b-8b36e8ac6231
+java:S1128"DRemove this unused import 'io.swagger.annotations.ApiModelProperty'.(í˜í8Œşäş“2J$3a256996-6da5-4f2a-b480-beb00e8872f2
 x
 java:S1128
-"5Remove this unused import 'lombok.EqualsAndHashCode'.(Ìà‰ò8»›­ÿ“2J$35172398-9e20-4cee-833d-3322192fcf08
+"5Remove this unused import 'lombok.EqualsAndHashCode'.(Ìà‰ò8»›­ÿ“2J$cb6630c7-27f1-4787-934a-eb7eba2c4cd1
 }
-java:S1128":Remove this unused import 'lombok.experimental.Accessors'.(ş¡Ğ„8¼›­ÿ“2J$ae0fe931-ab54-4b71-898a-7d0a82f9337c
+java:S1128":Remove this unused import 'lombok.experimental.Accessors'.(ş¡Ğ„8¼›­ÿ“2J$55c40082-f49a-4029-b714-c4fbc4da218f
 y
-java:S1128"1Remove this unused import 'java.io.Serializable'.(èãîÂÿÿÿÿÿ8ºÒªÿ“2J$0ea290ed-a518-46b9-b2ef-60f4362ca5d7
+java:S1128"1Remove this unused import 'java.io.Serializable'.(èãîÂÿÿÿÿÿ8ºÒªÿ“2J$4361a0db-3b0a-4f0d-95db-60ef19cf0b38

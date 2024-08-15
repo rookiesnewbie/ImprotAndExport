@@ -10,4 +10,20 @@ class BackDemoApplicationTests {
     void contextLoads() {
     }
 
+    public static void main(String args[]) {
+        Thread t=new Thread(){
+            public void  run(){
+                dianping();
+
+            }
+        };
+        t.start();
+        System.out.print("dazhong");
+    }
+    static void dianping(){
+        System.out.print("dianping");
+    }
+    static {
+        System.out.print("6666");
+    }
 }

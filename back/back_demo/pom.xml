@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.bojin</groupId>
     <artifactId>back_demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>back_demo</name>
     <description>back_demo</description>
     <url/>
@@ -139,8 +139,17 @@
 
 
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>lt-release</id>
+<!--            <url>http://localhost:9999/repository/lt-release/</url>-->
+            <url>http://hadoop102:9999/repository/lt-release/</url>
+        </repository>
+    </distributionManagement>
+
 
     <build>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -156,5 +165,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
